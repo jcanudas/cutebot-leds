@@ -1,0 +1,12 @@
+let strip = neopixel.create(DigitalPin.P15, 2, NeoPixelMode.RGB)
+basic.forever(function () {
+    strip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
+    strip.setPixelColor(1, neopixel.colors(NeoPixelColors.Blue))
+    strip.show()
+    basic.pause(500)
+    strip.setPixelColor(1, neopixel.colors(NeoPixelColors.Red))
+    strip.setPixelColor(0, neopixel.colors(NeoPixelColors.Blue))
+    strip.show()
+    basic.pause(500)
+    cuteBot.singleheadlights(cuteBot.RGBLights.ALL, randint(0, 255), randint(10, 100), randint(50, 255))
+})
